@@ -52,8 +52,6 @@ namespace WindowsFormsApplication1
             header.Name = "MyColumn1";
             header.Width = listView1.Width;
             listView1.Columns.Add(header);
-
-          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -74,7 +72,7 @@ namespace WindowsFormsApplication1
                     int text1 = Convert.ToInt32(textBox1.Text);
                     int text2 = Convert.ToInt32(textBox2.Text);
                     ListViewItem i1 = new ListViewItem(count.ToString() + ")\t GCD(" + text1.ToString() + ", " + text2.ToString() + ") = " + Euclid(text1, text2).ToString(), 0);
-                   // listView1.Items.Add(i1);
+                    listView1.Items.Add(i1);
                     ++count;
                 }
             }
@@ -117,6 +115,5 @@ namespace WindowsFormsApplication1
         {
             listView1.Items.Clear();
         }
-
     }
 }
