@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
             // 
             // GCD
             // 
-            this.GCD.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.GCD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GCD.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.GCD.Location = new System.Drawing.Point(564, 229);
@@ -75,6 +75,7 @@ namespace WindowsFormsApplication1
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Maroon;
             this.button2.Location = new System.Drawing.Point(564, 268);
@@ -118,7 +119,13 @@ namespace WindowsFormsApplication1
             this.listView1.Size = new System.Drawing.Size(501, 228);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
-          
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 10;
             // 
             // label3
             // 
@@ -130,7 +137,6 @@ namespace WindowsFormsApplication1
             this.label3.Size = new System.Drawing.Size(30, 31);
             this.label3.TabIndex = 7;
             this.label3.Text = "a";
-         
             // 
             // label4
             // 
@@ -145,6 +151,7 @@ namespace WindowsFormsApplication1
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(583, 361);
             this.button3.Name = "button3";

@@ -29,7 +29,11 @@ namespace WindowsFormsApplication1
 
         public int LCM(int a, int b)
         {
-            return (a * b) / Euclid(a, b);
+            if ( Euclid(a, b) != 0 )
+                return (a * b) / Euclid(a, b);
+            else                
+                MessageBox.Show("Error: Division by 0");
+            return -465132;
         }
 
         /// <summary>
@@ -72,6 +76,7 @@ namespace WindowsFormsApplication1
                     int text1 = Convert.ToInt32(textBox1.Text);
                     int text2 = Convert.ToInt32(textBox2.Text);
                     ListViewItem i1 = new ListViewItem(count.ToString() + ")\t GCD(" + text1.ToString() + ", " + text2.ToString() + ") = " + Euclid(text1, text2).ToString(), 0);
+                    i1.BackColor = Color.Cyan;
                     listView1.Items.Add(i1);
                     ++count;
                 }
@@ -84,11 +89,9 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e) // GCD
         {
-
             try
             {
-
-                if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+                if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) )
                 {
                     string noInputWarning = "No input found!";
                     MessageBox.Show(noInputWarning, "Error");
@@ -99,6 +102,8 @@ namespace WindowsFormsApplication1
                     int text1 = Convert.ToInt32(textBox1.Text);
                     int text2 = Convert.ToInt32(textBox2.Text);
                     ListViewItem i1 = new ListViewItem(count.ToString()+ ")\t LCM(" + text1.ToString() + ", " + text2.ToString() + ") = " + LCM(text1, text2).ToString(), 1);
+                    i1.ForeColor = Color.White;
+                    i1.BackColor = Color.Maroon;
                     listView1.Items.Add(i1);
                     ++count;
                 }
@@ -107,13 +112,14 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("There was some invalid input.  Try again.", "Exception Caught");
             }
+
         }
-
-
 
         private void button3_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
     }
 }
